@@ -1,0 +1,48 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=netstandard">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+  <Style Selector="Button.btn /template/ ContentPresenter">
+    <Setter Property="CornerRadius" Value="15" />
+  </Style>
+  <Style Selector="Button:pointerover.btn /template/ ContentPresenter">
+    <Setter Property="BorderBrush" Value="LightGreen" />
+    <Setter Property="Background" Value="LightGreen"/>
+  </Style>
+  <Style Selector="TextBlock">
+    <Setter Property="FontFamily" Value="Comic Sans MS"/>
+    <Setter Property="FontSize" Value="14"/>
+    <Setter Property="Foreground" Value="#FF33CB66"/>
+    <Setter Property="TextWrapping" Value="Wrap"/>
+  </Style>
+  <Style Selector="RadioButton.own">
+    <Setter Property="FontFamily" Value="Comic Sans MS"/>
+    <Setter Property="FontSize" Value="14"/>
+    <Setter Property="Foreground" Value="#FF707070"/>
+    <Setter Property="Padding" Value="5,-20,0,0"/>
+    <Setter Property="Height" Value="60"/>
+  </Style>
+  <Style Selector="RadioButton.exp">
+    <Setter Property="FontFamily" Value="Comic Sans MS"/>
+    <Setter Property="FontSize" Value="14"/>
+    <Setter Property="Foreground" Value="#FF707070"/>
+    <Setter Property="Padding" Value="5,-10,0,0"/>
+    <Setter Property="Height" Value="30"/>
+  </Style>
+  <Style Selector="Button.btn">
+    <Setter Property="FontFamily" Value="Comic Sans MS"/>
+    <Setter Property="FontSize" Value="16"/>
+    <Setter Property="Background" Value="#FF33CB67"/>
+    <Setter Property="Foreground" Value="White"/>
+   </Style>
+  <Style Selector="Label.content">
+    <Setter Property="FontFamily" Value="Segoe Script"/>
+    <Setter Property="FontSize" Value="16"/>
+    <Setter Property="Foreground" Value="#FF001689"/>
+  </Style>
+  
+</Styles>

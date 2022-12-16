@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:IDPversion3.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="501"
+        x:Class="IDPversion3.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ИДП: КТГПуДПГЖ"
+        CanResize="False"
+        Width="800" Height="501">
+
+  <Window.Styles>
+    <StyleInclude Source="/Style/Style.axaml"/>
+  </Window.Styles>
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+  <Grid Background="Wheat">
+    <Label Name="nameProgramm"   HorizontalContentAlignment="Center" Classes="content" Margin="40,30,0,0" FontWeight="Bold">КАЛЬКУЛЯТОР ТЯЖЕСТИ ГАСТРОИНТЕСТИНАЛЬНЫХ ПРОЯВЛЕНИЙ </Label>
+    <Label Name="nameProgrammt"   HorizontalContentAlignment="Center" Classes="content" Margin="40,50,0,0" FontWeight="Bold">У ДЕТЕЙ ПЕРВОГО ГОДА ЖИЗНИ</Label>
+    <TextBlock Name="startText" Text="ВАБЕРИТЕ ВАРИАНТЫ, НАИБОЛЕЕ СООТВЕСТВУЮЩИЕ КЛИНИЧЕСКИМ ПРОЯВЛЕНИЯМ ВАШЕГО РЕБЁНКА" TextAlignment="Center" HorizontalAlignment="Center"  Margin="40,173,40,0" />
+    <Button Name="startbtn" Classes="btn" Click="startbtn_Click" HorizontalContentAlignment="Center"   HorizontalAlignment="Center" Height="39" Width="204"   Content="НАЧАТЬ"></Button>
+    <Grid Name="questGrid" Background="Wheat" IsVisible="False" IsEnabled="False">
+      <Label Name="LabelContent"  Classes="content" Margin="40,30,0,0" FontWeight="Bold"></Label>
+      <Label Classes="content" Margin="39, 40, 40,0">____________________</Label> 
+      <TextBlock Name="sympTextBlock" Margin="40,63,0,0" />
+      <StackPanel Name="QuestStack" Margin="40, 115">
+        <RadioButton Classes="own" Name="answerone"></RadioButton>
+        <RadioButton Classes="own" Name="answertwo"></RadioButton>
+        <RadioButton Classes="own" Name="answerthree"></RadioButton>
+        <RadioButton Classes="own" Name="answerfour"></RadioButton>
+        <RadioButton Classes="own" Name="answerfive"></RadioButton>
+        <RadioButton Classes="own" Name="answersix"></RadioButton>
+        <RadioButton Classes="own" Name="answerseven"></RadioButton>
+      </StackPanel>
+      <Button Name="next" Classes="btn" Margin="0,432" Click="next_Click" HorizontalAlignment="Center" Height="39" Width="204" HorizontalContentAlignment="Center"></Button>
+      <Button Name="back" Classes="btn" Margin="0,472" Click="back_Click" HorizontalAlignment="Center" Height="39" Width="204" HorizontalContentAlignment="Center">НАЗАД</Button>
+      <TextBlock Name="result" Margin="40,63,0,0" IsEnabled="False" IsVisible="False" />
+    </Grid>
+  </Grid>
+    
+</Window>
